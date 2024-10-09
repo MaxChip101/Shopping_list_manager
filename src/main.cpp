@@ -95,39 +95,39 @@ void print_list(std::vector<std::string> list)
 
 int main()
 {
-    std::vector<std::string> shopping_list;
+    std::vector<std::string> todo_list;
     int pos;
     while (true)
     {
-        print_list(shopping_list);
+        print_list(todo_list);
         char choice = choice3("What would you like to do to your Todo list?", "Add an item", "Change an item", "Remove an Item");
         switch (choice)
         {
             case '1':
-                shopping_list.push_back(prompt("What is your item's name?"));
+                todo_list.push_back(prompt("What is your item's name?"));
                 break;
             
             case '2':
                 pos = prompt_int("What item would you like to change?");
-                if(pos >= int(shopping_list.size()))
+                if(pos >= int(todo_list.size()))
                 {
                     std::cout << "That item does not exist" << std::endl;
                 }
                 else
                 {
-                    shopping_list[pos] = prompt("What would you like to change it to?");
+                    todo_list[pos] = prompt("What would you like to change it to?");
                 }
                 break;
 
             case '3':
                 pos = prompt_int("What item would you like to delete?");
-                if(pos >= int(shopping_list.size()))
+                if(pos >= int(todo_list.size()))
                 {
                     std::cout << "That item does not exist" << std::endl;
                 }
                 else
                 {
-                    shopping_list.erase(shopping_list.begin()+pos, shopping_list.begin()+pos+1);
+                    todo_list.erase(todo_list.begin()+pos, todo_list.begin()+pos+1);
                 }
                 break;
         }
