@@ -62,27 +62,6 @@ int prompt_int(std::string text) {
     return i;
 }
 
-char choice2(std::string text, std::string _choice1, std::string _choice2) {
-    // renders the prompt text with the choices
-    std::cout << text << std::endl;
-    std::cout << "   1) " << _choice1 << ", 2) " << _choice2 << std::endl;
-
-    // user input
-    std::string picked;
-
-    std::cout << " > " << std::flush;
-    picked = input();
-
-    // if input is within the choices then exit loop
-    if(picked[0] == '1' || picked[0] == '2') {
-        return picked[0];
-    } else {
-        choice2(text, _choice1, _choice2);
-    }
-
-    return '0';
-}
-
 char choice3(std::string text, std::string _choice1, std::string _choice2, std::string _choice3) {
     // renders the prompt text with the choices
     std::cout << text << std::endl;
