@@ -85,7 +85,7 @@ char choice3(std::string text, std::string _choice1, std::string _choice2, std::
 
 void print_list(std::vector<std::string> list)
 {
-    std::cout << "Shopping List:" << std::endl;
+    std::cout << "Todo List:" << std::endl;
     for (size_t i = 0; i < list.size(); i++)
     {
         std::cout << "    " << i << ": " << list[i] << std::endl;
@@ -100,7 +100,7 @@ int main()
     while (true)
     {
         print_list(shopping_list);
-        char choice = choice3("What would you like to do to your shopping list?", "Add an item", "Change an item", "Remove an Item");
+        char choice = choice3("What would you like to do to your Todo list?", "Add an item", "Change an item", "Remove an Item");
         switch (choice)
         {
             case '1':
