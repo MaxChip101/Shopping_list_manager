@@ -11,8 +11,8 @@ BUILD_WINDOWS_DIR = build/windows
 SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
 
 # Executable names
-EXEC_LINUX = shopping_list_manager
-EXEC_WINDOWS = shopping_list_manager.exe
+EXEC_LINUX = todo_list_manager
+EXEC_WINDOWS = todo_list_manager.exe
 
 # Flags
 CXXFLAGS = -Wall -std=c++17
